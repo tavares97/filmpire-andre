@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+
+import { Actors, Movies, MovieInfo, Profile, Navbar } from './components';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex h-full">
+      <Navbar />
+      <main className="grow p-[2em]">
+        <div className="h-[70px]" />
+        <Switch>
+          <Route exact path="/movie/:id">
+            <MovieInfo />
+          </Route>
+          <Route exact path="/actors/:id">
+            <Actors />
+          </Route>
+          <Route exact path="/">
+            <Movies />
+          </Route>
+          <Route exact path="/profile/:id">
+            <Profile />
+          </Route>
+        </Switch>
+      </main>
     </div>
   );
 }
