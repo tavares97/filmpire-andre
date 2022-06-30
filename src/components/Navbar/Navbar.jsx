@@ -9,30 +9,37 @@ function Navbar() {
   const isAuthenticated = true;
 
   return (
-    <Nav className="rounded-none max-w-none bg-[#272727] border-none drop-shadow-sm shadow-black z-10">
-      <div className="container flex items-center justify-between text-blue-grey-900">
-
-        <MenuIcon className="h-6 mobile:hidden" color="white" />
+    <Nav className='rounded-none max-w-none bg-[#272727] border-none drop-shadow-sm shadow-black'>
+      <div className='container flex items-center justify-between text-blue-grey-900'>
+        <MenuIcon className='h-6 mobile:hidden' color='white' />
 
         {/* TODO: ADD SEARCH COMPONENT */}
-        {!isMobile && <p className="text-white">Search...</p>}
+        {!isMobile && <p className='text-white'>Search...</p>}
 
         <div>
           {!isAuthenticated ? (
-            <Button variant="text" className="text-grey-50 hover:bg-grey-200/10 flex items-center gap-1" size="sm">
+            <Button
+              variant='text'
+              className='text-grey-50 hover:bg-grey-200/10 flex items-center gap-1'
+              size='sm'
+            >
               Login
-              <UserCircleIcon className="h-6 " color="white" />
+              <UserCircleIcon className='h-6 ' color='white' />
             </Button>
           ) : (
-            <button type="button">
-              <Avatar variant="circular" alt="Profile" src="https://i.pravatar.cc/300" size="sm" />
+            <button type='button'>
+              <Avatar
+                variant='circular'
+                alt='Profile'
+                src='https://avatars.dicebear.com/api/open-peeps/ric.svg'
+                size='sm'
+              />
             </button>
           )}
         </div>
         {/* TODO: ADD SEARCH COMPONENT */}
-        {isMobile && (<p className="text-white">Search...</p>)}
+        {isMobile && <p className='text-white'>Search...</p>}
       </div>
-
     </Nav>
   );
 }

@@ -1,26 +1,32 @@
 import { Switch, Route } from 'react-router-dom';
 
-import { Actors, Movies, MovieInfo, Profile, Navbar } from './components';
+import {
+  Actors,
+  Movies,
+  MovieInfo,
+  Profile,
+  Navbar,
+  Sidebar,
+} from './components';
 
 function App() {
   return (
-    <div className="bg-[#121212] h-screen flex">
+    <div className='bg-[#121212] h-screen flex'>
       <Sidebar />
-      <div className="grow">
+      <div className='grow'>
         <Navbar />
-        <main className="p-[2em]">
-
+        <main className='p-[2em]'>
           <Switch>
-            <Route exact path="/movie/:id">
+            <Route exact path='/movie/:id'>
               <MovieInfo />
             </Route>
-            <Route exact path="/actors/:id">
+            <Route exact path='/actors/:id'>
               <Actors />
             </Route>
-            <Route exact path="/">
+            <Route exact path='/'>
               <Movies />
             </Route>
-            <Route exact path="/profile/:id">
+            <Route exact path='/profile/:id'>
               <Profile />
             </Route>
           </Switch>
