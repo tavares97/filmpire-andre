@@ -4,8 +4,20 @@
 
 @layer components {
   .divider {
-      --tw-border-opacity: 1;
-      border-color: rgb(255 255 255 / var(--tw-border-opacity));
-      opacity: 0.1;
+    --tw-border-opacity: 1;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity));
+    opacity: 0.1;
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
