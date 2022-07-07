@@ -17,7 +17,6 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'import/extensions': 0,
     'react/prop-types': 0,
-    'linebreak-style': 0,
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
     'max-len': [2, 250],
@@ -28,12 +27,7 @@ module.exports = {
         maxEOF: 1,
       },
     ],
-    'no-underscore-dangle': [
-      'error',
-      {
-        allow: ['_d', '_dh', '_h', '_id', '_m', '_n', '_t', '_text'],
-      },
-    ],
+
     'object-curly-newline': 0,
     'react/jsx-filename-extension': 0,
     'react/jsx-one-expression-per-line': 0,
