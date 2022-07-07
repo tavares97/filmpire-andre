@@ -4,3 +4,4 @@ export { default as Navbar } from './Navbar/Navbar';
 export { default as Profile } from './Profile/Profile';
 export { default as MovieInfo } from './MovieInfo/MovieInfo';
 export { default as Sidebar } from './Sidebar/Sidebar';
+export { default as Search } from './Search/Search';

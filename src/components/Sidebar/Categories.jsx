@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import { FilmIcon } from '@heroicons/react/outline';
 
+import { selectGenreOrCategory } from '../../features/currentGenreOrCategory';
+
 function Categories() {
+  const dispatch = useDispatch();
+
   const demoCategories = [
     { label: 'Popular', value: 'popular' },
     { label: 'Top Rated', value: 'top_rated' },
@@ -17,12 +22,12 @@ function Categories() {
       </p>
 
       {demoCategories.map(({ label, value }) => (
-        <ul>
+        <ul key={value}>
           <li>
             <Link
-              key={value}
-              className='flex gap-5 py-2 px-4 text-grey-300 hover:bg-grey-300/10 '
               to='/'
+              onClick={() => dispatch(selectGenreOrCategory(value))}
+              className='flex gap-5 py-2 px-4 text-grey-300 hover:bg-grey-300/10 '
             >
               <FilmIcon className='h-[30px]' />
               <button type='button'>{label}</button>
