@@ -14,7 +14,7 @@ function App() {
 
       <div className='grow'>
         <Navbar />
-        <main className='p-[2em] '>
+        <main className='p-[2em] min-h-screen '>
           <Switch>
             <Route exact path='/movie/:id'>
               <MovieInfo />

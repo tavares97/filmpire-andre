@@ -16,7 +16,7 @@ function MovieItem({ movie }) {
           }
           className='h-60  rounded-sm '
         />
-        <p className='mt-3'>{movie.title}</p>
+        <p className='mt-3 text-center'>{movie.title}</p>
         <ReactStars
           count={5}
           size={20}

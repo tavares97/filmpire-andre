@@ -9,6 +9,8 @@ module.exports = withMT({
   theme: {
     screens: {
       mobile: '600px',
+      '2xl': '1950px',
+      '3xl': '3000px',
     },
     extend: {},
   },

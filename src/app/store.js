@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+import userReducer from '../features/Auth';
 import genreOrCategoryReducer from '../features/currentGenreOrCategory';
 import togglerReducer from '../features/toggler';
 
@@ -9,5 +10,6 @@ export default configureStore({
     [tmdbApi.reducerPath]: tmdbApi.reducer,
     toggler: togglerReducer,
     currentGenreOrCategory: genreOrCategoryReducer,
+    user: userReducer,
   },
 });
