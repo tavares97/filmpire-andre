@@ -1,13 +1,9 @@
 import React from 'react';
 import { Button } from '@material-tailwind/react';
-import { useSelector } from 'react-redux';
 
 import { LogoutIcon } from '@heroicons/react/solid';
-import { userSelector } from '../../features/Auth';
 
 function Profile() {
-  const { user } = useSelector(userSelector);
-
   const favorite = [];
 
   const logout = () => {
@@ -27,9 +23,7 @@ function Profile() {
       </div>
 
       {!favorite.length ? (
-        <h5>
-          Add some movies to your favorites or watchlist them, its your account, we don't judge
-        </h5>
+        <h5>Add some movies to your favorites or watchlist them, its your account.</h5>
       ) : (
         {
           /** TODO:

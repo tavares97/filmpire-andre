@@ -11,6 +11,7 @@ module.exports = withMT({
       mobile: '600px',
       '2xl': '1950px',
       '3xl': '3000px',
+      'sm-down': { max: '999px' },
     },
     extend: {},
   },

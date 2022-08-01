@@ -40,7 +40,7 @@ function Navbar() {
   }, [token]);
 
   return (
-    <Nav className='rounded-none max-w-full px-6 justify-center bg-[#272727] border-none drop-shadow-sm shadow-black sticky top-0 z-30'>
+    <Nav className='rounded-none max-w-full justify-center bg-[#272727] border-none drop-shadow-sm shadow-black sticky top-0 z-20 '>
       <div
         className={`container flex items-center justify-between text-blue-grey-900 ${
           isMobile && 'flex-col'
